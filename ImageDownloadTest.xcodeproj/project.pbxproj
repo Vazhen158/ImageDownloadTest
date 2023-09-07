@@ -18,6 +18,8 @@
 		C99EEB862AAA6907001E4968 /* MainImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB852AAA6907001E4968 /* MainImageViewController.xib */; };
 		C99EEB882AAA6AEA001E4968 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB872AAA6AEA001E4968 /* ImageCell.swift */; };
 		C99EEB8A2AAA6B0F001E4968 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB892AAA6B0F001E4968 /* ImageCell.xib */; };
+		C99EEB8C2AAA6E36001E4968 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB8B2AAA6E36001E4968 /* ImageDownload.swift */; };
+		C99EEB902AAA7128001E4968 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB8F2AAA7128001E4968 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C99EEB852AAA6907001E4968 /* MainImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainImageViewController.xib; sourceTree = "<group>"; };
 		C99EEB872AAA6AEA001E4968 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		C99EEB892AAA6B0F001E4968 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		C99EEB8B2AAA6E36001E4968 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
+		C99EEB8F2AAA7128001E4968 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		C99EEB772AAA5DD2001E4968 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				C99EEB8B2AAA6E36001E4968 /* ImageDownload.swift */,
+				C99EEB8F2AAA7128001E4968 /* NetworkError.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -227,12 +233,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99EEB652AAA5D33001E4968 /* ViewController.swift in Sources */,
+				C99EEB8C2AAA6E36001E4968 /* ImageDownload.swift in Sources */,
 				C99EEB7D2AAA5E20001E4968 /* ImageDownloadEntity.swift in Sources */,
 				C99EEB6B2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld in Sources */,
 				C99EEB612AAA5D33001E4968 /* AppDelegate.swift in Sources */,
 				C99EEB632AAA5D33001E4968 /* SceneDelegate.swift in Sources */,
 				C99EEB882AAA6AEA001E4968 /* ImageCell.swift in Sources */,
 				C99EEB842AAA68CC001E4968 /* MainImageViewController.swift in Sources */,
+				C99EEB902AAA7128001E4968 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
