@@ -20,6 +20,11 @@
 		C99EEB8A2AAA6B0F001E4968 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB892AAA6B0F001E4968 /* ImageCell.xib */; };
 		C99EEB8C2AAA6E36001E4968 /* ImageDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB8B2AAA6E36001E4968 /* ImageDownload.swift */; };
 		C99EEB902AAA7128001E4968 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB8F2AAA7128001E4968 /* NetworkError.swift */; };
+		C99EEB922AAA7774001E4968 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB912AAA7774001E4968 /* ImageViewModel.swift */; };
+		C99EEB942AAA78B2001E4968 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB932AAA78B2001E4968 /* ImageCellViewModel.swift */; };
+		C99EEB962AAA7ADD001E4968 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB952AAA7ADD001E4968 /* BaseCollectionViewCell.swift */; };
+		C99EEB982AAA7D88001E4968 /* UIViewController + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB972AAA7D88001E4968 /* UIViewController + extensions.swift */; };
+		C99EEB9B2AAA84AE001E4968 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C99EEB9A2AAA84AE001E4968 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,10 @@
 		C99EEB892AAA6B0F001E4968 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 		C99EEB8B2AAA6E36001E4968 /* ImageDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownload.swift; sourceTree = "<group>"; };
 		C99EEB8F2AAA7128001E4968 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C99EEB912AAA7774001E4968 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		C99EEB932AAA78B2001E4968 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
+		C99EEB952AAA7ADD001E4968 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C99EEB972AAA7D88001E4968 /* UIViewController + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99EEB9B2AAA84AE001E4968 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +127,8 @@
 		C99EEB7A2AAA5DED001E4968 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C99EEB912AAA7774001E4968 /* ImageViewModel.swift */,
+				C99EEB932AAA78B2001E4968 /* ImageCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -124,6 +136,7 @@
 		C99EEB7B2AAA5DF6001E4968 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C99EEB972AAA7D88001E4968 /* UIViewController + extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -156,6 +169,7 @@
 			children = (
 				C99EEB872AAA6AEA001E4968 /* ImageCell.swift */,
 				C99EEB892AAA6B0F001E4968 /* ImageCell.xib */,
+				C99EEB952AAA7ADD001E4968 /* BaseCollectionViewCell.swift */,
 			);
 			path = ImageCollectionViewCell;
 			sourceTree = "<group>";
@@ -176,6 +190,9 @@
 			dependencies = (
 			);
 			name = ImageDownloadTest;
+			packageProductDependencies = (
+				C99EEB9A2AAA84AE001E4968 /* SDWebImage */,
+			);
 			productName = ImageDownloadTest;
 			productReference = C99EEB5D2AAA5D33001E4968 /* ImageDownloadTest.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +221,9 @@
 				Base,
 			);
 			mainGroup = C99EEB542AAA5D33001E4968;
+			packageReferences = (
+				C99EEB992AAA84AE001E4968 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = C99EEB5E2AAA5D33001E4968 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,11 +252,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99EEB922AAA7774001E4968 /* ImageViewModel.swift in Sources */,
 				C99EEB652AAA5D33001E4968 /* ViewController.swift in Sources */,
 				C99EEB8C2AAA6E36001E4968 /* ImageDownload.swift in Sources */,
 				C99EEB7D2AAA5E20001E4968 /* ImageDownloadEntity.swift in Sources */,
 				C99EEB6B2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld in Sources */,
+				C99EEB962AAA7ADD001E4968 /* BaseCollectionViewCell.swift in Sources */,
+				C99EEB942AAA78B2001E4968 /* ImageCellViewModel.swift in Sources */,
 				C99EEB612AAA5D33001E4968 /* AppDelegate.swift in Sources */,
+				C99EEB982AAA7D88001E4968 /* UIViewController + extensions.swift in Sources */,
 				C99EEB632AAA5D33001E4968 /* SceneDelegate.swift in Sources */,
 				C99EEB882AAA6AEA001E4968 /* ImageCell.swift in Sources */,
 				C99EEB842AAA68CC001E4968 /* MainImageViewController.swift in Sources */,
@@ -454,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C99EEB992AAA84AE001E4968 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C99EEB9A2AAA84AE001E4968 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C99EEB992AAA84AE001E4968 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C99EEB692AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld */ = {
