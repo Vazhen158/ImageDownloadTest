@@ -16,6 +16,8 @@
 		C99EEB7D2AAA5E20001E4968 /* ImageDownloadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB7C2AAA5E20001E4968 /* ImageDownloadEntity.swift */; };
 		C99EEB842AAA68CC001E4968 /* MainImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB832AAA68CC001E4968 /* MainImageViewController.swift */; };
 		C99EEB862AAA6907001E4968 /* MainImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB852AAA6907001E4968 /* MainImageViewController.xib */; };
+		C99EEB882AAA6AEA001E4968 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB872AAA6AEA001E4968 /* ImageCell.swift */; };
+		C99EEB8A2AAA6B0F001E4968 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB892AAA6B0F001E4968 /* ImageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C99EEB7C2AAA5E20001E4968 /* ImageDownloadEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadEntity.swift; sourceTree = "<group>"; };
 		C99EEB832AAA68CC001E4968 /* MainImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageViewController.swift; sourceTree = "<group>"; };
 		C99EEB852AAA6907001E4968 /* MainImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainImageViewController.xib; sourceTree = "<group>"; };
+		C99EEB872AAA6AEA001E4968 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		C99EEB892AAA6B0F001E4968 /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 		C99EEB812AAA6825001E4968 /* ImageCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				C99EEB872AAA6AEA001E4968 /* ImageCell.swift */,
+				C99EEB892AAA6B0F001E4968 /* ImageCell.xib */,
 			);
 			path = ImageCollectionViewCell;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99EEB702AAA5D34001E4968 /* LaunchScreen.storyboard in Resources */,
+				C99EEB8A2AAA6B0F001E4968 /* ImageCell.xib in Resources */,
 				C99EEB6D2AAA5D34001E4968 /* Assets.xcassets in Resources */,
 				C99EEB862AAA6907001E4968 /* MainImageViewController.xib in Resources */,
 			);
@@ -224,6 +231,7 @@
 				C99EEB6B2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld in Sources */,
 				C99EEB612AAA5D33001E4968 /* AppDelegate.swift in Sources */,
 				C99EEB632AAA5D33001E4968 /* SceneDelegate.swift in Sources */,
+				C99EEB882AAA6AEA001E4968 /* ImageCell.swift in Sources */,
 				C99EEB842AAA68CC001E4968 /* MainImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
