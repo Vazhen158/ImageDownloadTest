@@ -28,7 +28,6 @@ class ImageCell: BaseCollectionViewCell {
         super.prepareForReuse()
         downloadImage.image = nil
         titleImage.text = nil
-
     }
     
     func setModel(model: ImageCellViewModel) {

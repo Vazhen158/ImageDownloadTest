@@ -8,7 +8,9 @@
 import Foundation
 
 enum APIEndpoints {
-    static let photos = "https://jsonplaceholder.typicode.com/photos"
+    static func photos(page: Int, limit: Int) -> String {
+        return "https://jsonplaceholder.typicode.com/photos?_page=\(page)&_limit=\(limit)"
+    }
 }
 
 class ImageDownload {
@@ -19,8 +21,8 @@ class ImageDownload {
         self.session = session
     }
     
-    func downloadData(completion: @escaping (Result<[ImageDownloadEntity], Error>) -> Void) {
-        guard let url = URL(string: APIEndpoints.photos) else {
+    func downloadData(page: Int, limit: Int, completion: @escaping (Result<[ImageDownloadEntity], Error>) -> Void) {
+        guard let url = URL(string: APIEndpoints.photos(page: page, limit: limit)) else {
             dispatchToMain(.failure(PhotoDownloadError.invalidURL), completion: completion)
             return
         }

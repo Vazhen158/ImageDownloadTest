@@ -11,10 +11,10 @@ class MainImageViewController: UIViewController {
     
     @IBOutlet weak var imageCollectionView: UICollectionView!
     
-    var photoViewModel: ImageViewModel
+    var imageViewModel: ImageViewModel
 
     init(imageViewModel: ImageViewModel) {
-        self.photoViewModel = imageViewModel
+        self.imageViewModel = imageViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -31,7 +31,7 @@ class MainImageViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        photoViewModel.viewUpdate = { [weak self] in
+        imageViewModel.viewUpdate = { [weak self] in
             DispatchQueue.main.async {
                 self?.imageCollectionView.reloadData()
             }
@@ -39,8 +39,8 @@ class MainImageViewController: UIViewController {
     }
     
     func bind() {
-        photoViewModel.getImageList()
-        photoViewModel.showError = { [weak self] error in
+        imageViewModel.getImageList()
+        imageViewModel.showError = { [weak self] error in
             self?.showToast(message: error.localizedDescription, interval: 4)
         }
     }
@@ -55,18 +55,29 @@ class MainImageViewController: UIViewController {
         layout.scrollDirection = .vertical
         self.imageCollectionView.collectionViewLayout = layout
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+
+        if offsetY > contentHeight - scrollView.frame.height * 1.5 {
+            if imageViewModel.hasMoreImages {
+                imageViewModel.getImageList()
+            }
+        }
+    }
 
 }
 
 extension MainImageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoViewModel.images.count
+        return imageViewModel.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.cellIdentifierForReg,
                                                                for: indexPath) as? ImageCell {
-            cell.setModel(model: ImageCellViewModel(imageDownload: photoViewModel.images[indexPath.row]))
+            cell.setModel(model: ImageCellViewModel(imageDownload: imageViewModel.images[indexPath.row]))
             return cell
             
         }
@@ -92,7 +103,7 @@ extension MainImageViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
+        return 15
     }
 
     func collectionView(_ collectionView: UICollectionView,

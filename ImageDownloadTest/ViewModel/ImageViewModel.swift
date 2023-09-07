@@ -1,6 +1,7 @@
 
 
 import Foundation
+import SDWebImage
 
 typealias SimpleClosure = () -> Void
 typealias ErrorClosure = (Error) -> Void
@@ -12,20 +13,49 @@ final class ImageViewModel {
     var viewUpdate: SimpleClosure?
     var showError: ErrorClosure?
     
+    var page: Int = 1
+    let limit: Int = 15
+    var hasMoreImages: Bool = true
+    
     init(downLoad: ImageDownload = ImageDownload()) {
         self.downLoadImage = downLoad
     }
     
     func getImageList() {
-        downLoadImage.downloadData { [weak self] result in
+        guard hasMoreImages else { return }
+        
+        downLoadImage.downloadData(page: page, limit: limit) { [weak self] result in
+            guard let strongSelf = self else { return }
+            
             switch result {
             case .success(let response):
-                self?.images = response
-                self?.viewUpdate?()
+                if response.isEmpty || response.count < strongSelf.limit {
+                    strongSelf.hasMoreImages = false
+                }
+                
+                strongSelf.images.append(contentsOf: response)
+                strongSelf.cacheImages(from: response)
+                
+                strongSelf.page += 1
+                strongSelf.viewUpdate?()
             case .failure(let error):
-                self?.showError?(error)
+                strongSelf.showError?(error)
             }
         }
     }
     
+    private func cacheImages(from entities: [ImageDownloadEntity]) {
+        for imageEntity in entities {
+            if let imageUrl = URL(string: imageEntity.thumbnailUrl) {
+                SDWebImageManager.shared.loadImage(with: imageUrl, options: .highPriority, progress: nil) { (image, _, _, _, _, _) in
+                    SDImageCache.shared.store(image, forKey: imageEntity.thumbnailUrl, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func getCachedImage(for imageUrl: String) -> UIImage? {
+        return SDImageCache.shared.imageFromCache(forKey: imageUrl)
+    }
 }
+
