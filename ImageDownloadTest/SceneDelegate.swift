@@ -14,9 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
          if let ws = scene as? UIWindowScene {
+             let model = ImageViewModel()
              let myWindow = UIWindow(windowScene: ws)
              let navContr = UINavigationController()
-             let viewController = MainImageViewController()
+             let viewController = MainImageViewController(imageViewModel: model)
              navContr.viewControllers = [viewController]
              myWindow.rootViewController = navContr
              self.window = myWindow
