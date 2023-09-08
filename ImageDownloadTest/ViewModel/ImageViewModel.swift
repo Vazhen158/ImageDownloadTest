@@ -14,17 +14,21 @@ final class ImageViewModel {
     var showError: ErrorClosure?
     
     var page: Int = 1
-    let limit: Int = 15
+    let limit: Int = 10
     var hasMoreImages: Bool = true
+    var isLoading: Bool = false
     
     init(downLoad: ImageDownload = ImageDownload()) {
         self.downLoadImage = downLoad
     }
     
     func getImageList() {
-        guard hasMoreImages else { return }
+        guard hasMoreImages && !isLoading else { return }
+            
+            isLoading = true
         
         downLoadImage.downloadData(page: page, limit: limit) { [weak self] result in
+            self?.isLoading = false
             guard let strongSelf = self else { return }
             
             switch result {

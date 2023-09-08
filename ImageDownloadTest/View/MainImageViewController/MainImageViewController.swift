@@ -61,7 +61,7 @@ class MainImageViewController: UIViewController {
         let contentHeight = scrollView.contentSize.height
 
         if offsetY > contentHeight - scrollView.frame.height * 1.5 {
-            if imageViewModel.hasMoreImages {
+            if imageViewModel.hasMoreImages && !imageViewModel.isLoading {
                 imageViewModel.getImageList()
             }
         }
@@ -77,7 +77,15 @@ extension MainImageViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = imageCollectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.cellIdentifierForReg,
                                                                for: indexPath) as? ImageCell {
-            cell.setModel(model: ImageCellViewModel(imageDownload: imageViewModel.images[indexPath.row]))
+            let imageEntity = imageViewModel.images[indexPath.row]
+                    if let cachedImage = imageViewModel.getCachedImage(for: imageEntity.thumbnailUrl) {
+                        cell.downloadImage.image = cachedImage
+                        cell.titleImage.text = imageEntity.title
+                    } else {
+                        cell.setModel(model: ImageCellViewModel(imageDownload: imageViewModel.images[indexPath.row]))
+                    }
+            
+            
             return cell
             
         }
