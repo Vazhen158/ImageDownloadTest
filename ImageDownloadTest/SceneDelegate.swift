@@ -14,9 +14,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
          if let ws = scene as? UIWindowScene {
+             let model = ImageViewModel()
              let myWindow = UIWindow(windowScene: ws)
              let navContr = UINavigationController()
-             let viewController = MainImageViewController()
+             let viewController = MainImageViewController(imageViewModel: model)
              navContr.viewControllers = [viewController]
              myWindow.rootViewController = navContr
              self.window = myWindow
@@ -52,8 +53,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
 
-        // Save changes in the application's managed object context when the application transitions to the background.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
 
