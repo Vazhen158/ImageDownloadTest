@@ -25,7 +25,6 @@ class ImageCell: BaseCollectionViewCell {
     
     var showAlert: SimpleClosure?
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -52,6 +51,12 @@ class ImageCell: BaseCollectionViewCell {
         downloadImage.image = image
         titleImage.text = item.imageItem.title
         viewModel = item
+        
+        if isFavorite(item: item.imageItem) {
+               self.favoriteButton.setImage(UIImage(named: "fav"), for: .normal)
+           } else {
+               self.favoriteButton.setImage(UIImage(named: "Vector"), for: .normal)
+           }
     }
     
     func setupUI() {

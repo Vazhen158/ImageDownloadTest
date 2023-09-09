@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol UpdateUI: AnyObject {
+    func reloadUI()
+}
+
 class MainImageViewController: UIViewController {
     
     @IBOutlet weak var imageCollectionView: UICollectionView!
@@ -71,6 +75,7 @@ class MainImageViewController: UIViewController {
     
     @IBAction func favoritesShowScreenAction(_ sender: UIButton) {
         let detailVC = FavoriteImageViewController()
+        detailVC.delegate = self
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
@@ -80,6 +85,12 @@ class MainImageViewController: UIViewController {
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
+}
+
+extension MainImageViewController: UpdateUI {
+    func reloadUI() {
+        imageCollectionView.reloadData()
+    }
 }
 
 extension MainImageViewController: UICollectionViewDelegate, UICollectionViewDataSource {

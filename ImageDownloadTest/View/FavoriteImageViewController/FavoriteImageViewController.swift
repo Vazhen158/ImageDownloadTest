@@ -13,6 +13,7 @@ class FavoriteImageViewController: UIViewController {
     @IBOutlet weak var favoriteCollectionView: UICollectionView!
     
     private var viewModel = FavoriteImageViewModel()
+    weak var delegate: UpdateUI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,7 @@ extension FavoriteImageViewController: UICollectionViewDelegate, UICollectionVie
                 cell.configure(with: FavoriteImageCellViewModel(with: imageEntity))
                 cell.updateCollection = { [weak self] in
                     self?.favoriteCollectionView.reloadData()
+                    self?.delegate?.reloadUI()
                 }
             }
             return cell
