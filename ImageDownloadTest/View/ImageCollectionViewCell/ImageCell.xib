@@ -23,33 +23,33 @@
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="249" id="EQj-aQ-4JA"/>
-                            <constraint firstAttribute="width" constant="250" id="o8P-qT-Q4l"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3C-bt-NV6">
-                        <rect key="frame" x="7" y="312" width="194" height="37"/>
+                        <rect key="frame" x="7" y="312" width="183" height="37"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="37" id="3XU-f9-8uM"/>
-                            <constraint firstAttribute="width" constant="194" id="Xgl-p0-yIO"/>
+                            <constraint firstAttribute="width" constant="183" id="Xgl-p0-yIO"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xD-3L-Qk4">
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xD-3L-Qk4">
                         <rect key="frame" x="198" y="313" width="36" height="36"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="TtH-L2-dFf"/>
                             <constraint firstAttribute="height" constant="36" id="lRe-dk-HEP"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                        <buttonConfiguration key="configuration" style="plain" image="Vector"/>
                         <connections>
                             <action selector="favoriteButtonAction:" destination="OQf-oV-T99" eventType="touchUpInside" id="Pgb-01-Xdl"/>
                         </connections>
                     </button>
                     <activityIndicatorView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="i9f-ur-rqv">
-                        <rect key="frame" x="105" y="137" width="40" height="40"/>
+                        <rect key="frame" x="105" y="137" width="40" height="20"/>
                     </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,7 +62,6 @@
                     <constraint firstAttribute="trailing" secondItem="nsE-P4-LRM" secondAttribute="trailing" id="UoU-Of-7d6"/>
                     <constraint firstItem="i9f-ur-rqv" firstAttribute="leading" secondItem="eid-lH-Gcg" secondAttribute="leading" constant="105" id="VVQ-SA-5b3"/>
                     <constraint firstAttribute="bottom" secondItem="2xD-3L-Qk4" secondAttribute="bottom" constant="14" id="j2z-G8-MUc"/>
-                    <constraint firstItem="q3C-bt-NV6" firstAttribute="top" secondItem="i9f-ur-rqv" secondAttribute="bottom" constant="135" id="n2c-CL-GqB"/>
                     <constraint firstItem="nsE-P4-LRM" firstAttribute="leading" secondItem="eid-lH-Gcg" secondAttribute="leading" id="sfI-4W-hdO"/>
                     <constraint firstItem="i9f-ur-rqv" firstAttribute="top" secondItem="eid-lH-Gcg" secondAttribute="top" constant="137" id="z1m-pR-Z9E"/>
                 </constraints>
@@ -79,7 +78,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="Vector" width="28" height="28"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

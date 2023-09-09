@@ -20,6 +20,6 @@ class ImageDetailViewModel {
     }
 
     var imageUrl: String? {
-        return imageItem.thumbnailUrl
+        return imageItem.url
     }
 }

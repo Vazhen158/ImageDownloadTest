@@ -61,8 +61,21 @@ class ImageCell: BaseCollectionViewCell {
     
     @IBAction func favoriteButtonAction(_ sender: UIButton) {
         guard let imageItem = viewModel?.imageItem else { return }
-        StorageManager.saveToRealm(imageDownload: imageItem)
-        self.showAlert?()
+        
+        DispatchQueue.main.async { [weak self] in
+            if self?.isFavorite(item: imageItem) == true {
+                StorageManager.deleteObject(imageItem)
+                self?.favoriteButton.setImage(UIImage(named: "Vector"), for: .normal)
+            } else {
+                StorageManager.saveToRealm(imageDownload: imageItem)
+                self?.favoriteButton.setImage(UIImage(named: "fav"), for: .normal)
+                self?.showAlert?()
+            }
+        }
+       
     }
     
+    func isFavorite(item: ImageDownloadEntity) -> Bool {
+        return StorageManager.isItemSaved(imageDownload: item)
+    }
 }

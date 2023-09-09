@@ -36,7 +36,7 @@ class FavoriteImageCell: BaseCollectionViewCell {
         favoriteTitle.text = viewModel.getTitle()
     }
     
-    @IBAction func favoriteDeleteAvtion(_ sender: UIButton) {
+    @IBAction func favoriteDeleteAktion(_ sender: UIButton) {
         viewModel?.deleteFavorite()
         self.updateCollection?()
     }

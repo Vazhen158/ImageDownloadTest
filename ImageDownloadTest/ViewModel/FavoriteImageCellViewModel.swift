@@ -29,6 +29,6 @@ final class FavoriteImageCellViewModel {
     }
     
     func deleteFavorite() {
-        StorageManager.deleteObject(imageEntity)
+        StorageManager.deleteFavoriteObject(imageEntity)
     }
 }

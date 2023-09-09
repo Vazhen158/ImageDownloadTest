@@ -12,9 +12,24 @@ let realm = try? Realm()
 
 class StorageManager {
     
-    static func deleteObject(_ imageItem: ImageDownloadEntityRealm) {
+    static func isItemSaved(imageDownload: ImageDownloadEntity) -> Bool {
+        let savedItem = realm?.objects(ImageDownloadEntityRealm.self).filter("id == %@", imageDownload.id).first
+            return savedItem != nil
+        }
+    
+    static func deleteObject(_ imageItem: ImageDownloadEntity) {
+        try! realm?.write {
+            if let itemToDelete = realm?.objects(ImageDownloadEntityRealm.self).filter("id == %@", imageItem.id).first {
+                realm?.delete(itemToDelete)
+               }
+           }
+       }
+    
+    static func deleteFavoriteObject(_ imageItem: ImageDownloadEntityRealm) {
         try? realm?.write {
-            realm?.delete(imageItem)
+            if let itemToDelete = realm?.objects(ImageDownloadEntityRealm.self).filter("id == %@", imageItem.id).first {
+                realm?.delete(itemToDelete)
+            }
         }
     }
     
