@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		C99EEB612AAA5D33001E4968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB602AAA5D33001E4968 /* AppDelegate.swift */; };
 		C99EEB632AAA5D33001E4968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB622AAA5D33001E4968 /* SceneDelegate.swift */; };
-		C99EEB652AAA5D33001E4968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB642AAA5D33001E4968 /* ViewController.swift */; };
-		C99EEB6B2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB692AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld */; };
 		C99EEB6D2AAA5D34001E4968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB6C2AAA5D34001E4968 /* Assets.xcassets */; };
 		C99EEB702AAA5D34001E4968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99EEB6E2AAA5D34001E4968 /* LaunchScreen.storyboard */; };
 		C99EEB7D2AAA5E20001E4968 /* ImageDownloadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB7C2AAA5E20001E4968 /* ImageDownloadEntity.swift */; };
@@ -25,14 +23,26 @@
 		C99EEB962AAA7ADD001E4968 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB952AAA7ADD001E4968 /* BaseCollectionViewCell.swift */; };
 		C99EEB982AAA7D88001E4968 /* UIViewController + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99EEB972AAA7D88001E4968 /* UIViewController + extensions.swift */; };
 		C99EEB9B2AAA84AE001E4968 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C99EEB9A2AAA84AE001E4968 /* SDWebImage */; };
+		C9C2EC682AABB4CD00B5C188 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C9C2EC672AABB4CD00B5C188 /* Realm */; };
+		C9C2EC6A2AABB4CD00B5C188 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9C2EC692AABB4CD00B5C188 /* RealmSwift */; };
+		C9C2EC6D2AABB66400B5C188 /* ImageDownloadEntityRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2EC6C2AABB66400B5C188 /* ImageDownloadEntityRealm.swift */; };
+		C9C2EC6F2AABC90D00B5C188 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2EC6E2AABC90D00B5C188 /* StorageManager.swift */; };
+		C9C2EC712AABCD6A00B5C188 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C2EC702AABCD6A00B5C188 /* ImageDetailViewController.swift */; };
+		C9C2EC732AABCD8C00B5C188 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C2EC722AABCD8C00B5C188 /* ImageDetailViewController.xib */; };
+		C9C85BD72AAC752B00CA6295 /* ImageDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85BD62AAC752B00CA6295 /* ImageDetailViewModel.swift */; };
+		C9C85BDA2AAC847A00CA6295 /* FavoriteImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85BD92AAC847A00CA6295 /* FavoriteImageViewController.swift */; };
+		C9C85BDC2AAC84D600CA6295 /* FavoriteImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C85BDB2AAC84D600CA6295 /* FavoriteImageViewController.xib */; };
+		C9C85BDF2AAC889600CA6295 /* FavoriteImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85BDE2AAC889600CA6295 /* FavoriteImageCell.swift */; };
+		C9C85BE32AAC88C400CA6295 /* FavoriteImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C85BE22AAC88C400CA6295 /* FavoriteImageCell.xib */; };
+		C9C85BE52AAC960500CA6295 /* FavoriteImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85BE42AAC960500CA6295 /* FavoriteImageViewModel.swift */; };
+		C9C85BE72AAC98EA00CA6295 /* RealmImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85BE62AAC98EA00CA6295 /* RealmImageRepository.swift */; };
+		C9C85BE92AAC9E4F00CA6295 /* FavoriteImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C85BE82AAC9E4F00CA6295 /* FavoriteImageCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C99EEB5D2AAA5D33001E4968 /* ImageDownloadTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageDownloadTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99EEB602AAA5D33001E4968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99EEB622AAA5D33001E4968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C99EEB642AAA5D33001E4968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C99EEB6A2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageDownloadTest.xcdatamodel; sourceTree = "<group>"; };
 		C99EEB6C2AAA5D34001E4968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C99EEB6F2AAA5D34001E4968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C99EEB712AAA5D34001E4968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +57,18 @@
 		C99EEB932AAA78B2001E4968 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
 		C99EEB952AAA7ADD001E4968 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C99EEB972AAA7D88001E4968 /* UIViewController + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + extensions.swift"; sourceTree = "<group>"; };
+		C9C2EC6C2AABB66400B5C188 /* ImageDownloadEntityRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadEntityRealm.swift; sourceTree = "<group>"; };
+		C9C2EC6E2AABC90D00B5C188 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C9C2EC702AABCD6A00B5C188 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		C9C2EC722AABCD8C00B5C188 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
+		C9C85BD62AAC752B00CA6295 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
+		C9C85BD92AAC847A00CA6295 /* FavoriteImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteImageViewController.swift; sourceTree = "<group>"; };
+		C9C85BDB2AAC84D600CA6295 /* FavoriteImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteImageViewController.xib; sourceTree = "<group>"; };
+		C9C85BDE2AAC889600CA6295 /* FavoriteImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteImageCell.swift; sourceTree = "<group>"; };
+		C9C85BE22AAC88C400CA6295 /* FavoriteImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteImageCell.xib; sourceTree = "<group>"; };
+		C9C85BE42AAC960500CA6295 /* FavoriteImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteImageViewModel.swift; sourceTree = "<group>"; };
+		C9C85BE62AAC98EA00CA6295 /* RealmImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmImageRepository.swift; sourceTree = "<group>"; };
+		C9C85BE82AAC9E4F00CA6295 /* FavoriteImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteImageCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C2EC6A2AABB4CD00B5C188 /* RealmSwift in Frameworks */,
+				C9C2EC682AABB4CD00B5C188 /* Realm in Frameworks */,
 				C99EEB9B2AAA84AE001E4968 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +104,7 @@
 		C99EEB5F2AAA5D33001E4968 /* ImageDownloadTest */ = {
 			isa = PBXGroup;
 			children = (
+				C9C2EC6B2AABB64B00B5C188 /* DataManager */,
 				C99EEB772AAA5DD2001E4968 /* NetworkService */,
 				C99EEB782AAA5DDF001E4968 /* Model */,
 				C99EEB792AAA5DE6001E4968 /* View */,
@@ -87,11 +112,9 @@
 				C99EEB7B2AAA5DF6001E4968 /* Extensions */,
 				C99EEB602AAA5D33001E4968 /* AppDelegate.swift */,
 				C99EEB622AAA5D33001E4968 /* SceneDelegate.swift */,
-				C99EEB642AAA5D33001E4968 /* ViewController.swift */,
 				C99EEB6C2AAA5D34001E4968 /* Assets.xcassets */,
 				C99EEB6E2AAA5D34001E4968 /* LaunchScreen.storyboard */,
 				C99EEB712AAA5D34001E4968 /* Info.plist */,
-				C99EEB692AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld */,
 			);
 			path = ImageDownloadTest;
 			sourceTree = "<group>";
@@ -116,6 +139,7 @@
 		C99EEB792AAA5DE6001E4968 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C9C85BDD2AAC887600CA6295 /* FavoriteImageCell */,
 				C99EEB812AAA6825001E4968 /* ImageCollectionViewCell */,
 				C99EEB7E2AAA67BC001E4968 /* MainImageViewController */,
 				C99EEB7F2AAA6803001E4968 /* DetailImageViewController */,
@@ -129,6 +153,9 @@
 			children = (
 				C99EEB912AAA7774001E4968 /* ImageViewModel.swift */,
 				C99EEB932AAA78B2001E4968 /* ImageCellViewModel.swift */,
+				C9C85BD62AAC752B00CA6295 /* ImageDetailViewModel.swift */,
+				C9C85BE42AAC960500CA6295 /* FavoriteImageViewModel.swift */,
+				C9C85BE82AAC9E4F00CA6295 /* FavoriteImageCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +180,8 @@
 		C99EEB7F2AAA6803001E4968 /* DetailImageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C9C2EC702AABCD6A00B5C188 /* ImageDetailViewController.swift */,
+				C9C2EC722AABCD8C00B5C188 /* ImageDetailViewController.xib */,
 			);
 			path = DetailImageViewController;
 			sourceTree = "<group>";
@@ -160,6 +189,8 @@
 		C99EEB802AAA6811001E4968 /* FavoriteImageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C9C85BD92AAC847A00CA6295 /* FavoriteImageViewController.swift */,
+				C9C85BDB2AAC84D600CA6295 /* FavoriteImageViewController.xib */,
 			);
 			path = FavoriteImageViewController;
 			sourceTree = "<group>";
@@ -172,6 +203,25 @@
 				C99EEB952AAA7ADD001E4968 /* BaseCollectionViewCell.swift */,
 			);
 			path = ImageCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C9C2EC6B2AABB64B00B5C188 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C9C2EC6C2AABB66400B5C188 /* ImageDownloadEntityRealm.swift */,
+				C9C2EC6E2AABC90D00B5C188 /* StorageManager.swift */,
+				C9C85BE62AAC98EA00CA6295 /* RealmImageRepository.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		C9C85BDD2AAC887600CA6295 /* FavoriteImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				C9C85BDE2AAC889600CA6295 /* FavoriteImageCell.swift */,
+				C9C85BE22AAC88C400CA6295 /* FavoriteImageCell.xib */,
+			);
+			path = FavoriteImageCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +242,8 @@
 			name = ImageDownloadTest;
 			packageProductDependencies = (
 				C99EEB9A2AAA84AE001E4968 /* SDWebImage */,
+				C9C2EC672AABB4CD00B5C188 /* Realm */,
+				C9C2EC692AABB4CD00B5C188 /* RealmSwift */,
 			);
 			productName = ImageDownloadTest;
 			productReference = C99EEB5D2AAA5D33001E4968 /* ImageDownloadTest.app */;
@@ -223,6 +275,7 @@
 			mainGroup = C99EEB542AAA5D33001E4968;
 			packageReferences = (
 				C99EEB992AAA84AE001E4968 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				C9C2EC662AABB4CD00B5C188 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = C99EEB5E2AAA5D33001E4968 /* Products */;
 			projectDirPath = "";
@@ -238,8 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C85BDC2AAC84D600CA6295 /* FavoriteImageViewController.xib in Resources */,
+				C9C2EC732AABCD8C00B5C188 /* ImageDetailViewController.xib in Resources */,
 				C99EEB702AAA5D34001E4968 /* LaunchScreen.storyboard in Resources */,
 				C99EEB8A2AAA6B0F001E4968 /* ImageCell.xib in Resources */,
+				C9C85BE32AAC88C400CA6295 /* FavoriteImageCell.xib in Resources */,
 				C99EEB6D2AAA5D34001E4968 /* Assets.xcassets in Resources */,
 				C99EEB862AAA6907001E4968 /* MainImageViewController.xib in Resources */,
 			);
@@ -252,19 +308,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C85BD72AAC752B00CA6295 /* ImageDetailViewModel.swift in Sources */,
 				C99EEB922AAA7774001E4968 /* ImageViewModel.swift in Sources */,
-				C99EEB652AAA5D33001E4968 /* ViewController.swift in Sources */,
 				C99EEB8C2AAA6E36001E4968 /* ImageDownload.swift in Sources */,
+				C9C85BDF2AAC889600CA6295 /* FavoriteImageCell.swift in Sources */,
+				C9C85BE92AAC9E4F00CA6295 /* FavoriteImageCellViewModel.swift in Sources */,
+				C9C2EC6D2AABB66400B5C188 /* ImageDownloadEntityRealm.swift in Sources */,
 				C99EEB7D2AAA5E20001E4968 /* ImageDownloadEntity.swift in Sources */,
-				C99EEB6B2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld in Sources */,
 				C99EEB962AAA7ADD001E4968 /* BaseCollectionViewCell.swift in Sources */,
 				C99EEB942AAA78B2001E4968 /* ImageCellViewModel.swift in Sources */,
 				C99EEB612AAA5D33001E4968 /* AppDelegate.swift in Sources */,
 				C99EEB982AAA7D88001E4968 /* UIViewController + extensions.swift in Sources */,
+				C9C85BE52AAC960500CA6295 /* FavoriteImageViewModel.swift in Sources */,
 				C99EEB632AAA5D33001E4968 /* SceneDelegate.swift in Sources */,
+				C9C85BDA2AAC847A00CA6295 /* FavoriteImageViewController.swift in Sources */,
+				C9C2EC712AABCD6A00B5C188 /* ImageDetailViewController.swift in Sources */,
+				C9C85BE72AAC98EA00CA6295 /* RealmImageRepository.swift in Sources */,
 				C99EEB882AAA6AEA001E4968 /* ImageCell.swift in Sources */,
 				C99EEB842AAA68CC001E4968 /* MainImageViewController.swift in Sources */,
 				C99EEB902AAA7128001E4968 /* NetworkError.swift in Sources */,
+				C9C2EC6F2AABC90D00B5C188 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +551,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C9C2EC662AABB4CD00B5C188 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -496,20 +567,17 @@
 			package = C99EEB992AAA84AE001E4968 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		C99EEB692AAA5D33001E4968 /* ImageDownloadTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C99EEB6A2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodel */,
-			);
-			currentVersion = C99EEB6A2AAA5D33001E4968 /* ImageDownloadTest.xcdatamodel */;
-			path = ImageDownloadTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		C9C2EC672AABB4CD00B5C188 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9C2EC662AABB4CD00B5C188 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
 		};
-/* End XCVersionGroup section */
+		C9C2EC692AABB4CD00B5C188 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9C2EC662AABB4CD00B5C188 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C99EEB552AAA5D33001E4968 /* Project object */;
 }

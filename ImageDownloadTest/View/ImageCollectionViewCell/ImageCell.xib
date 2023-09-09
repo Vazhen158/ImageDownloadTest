@@ -48,22 +48,31 @@
                             <action selector="favoriteButtonAction:" destination="OQf-oV-T99" eventType="touchUpInside" id="Pgb-01-Xdl"/>
                         </connections>
                     </button>
+                    <activityIndicatorView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="i9f-ur-rqv">
+                        <rect key="frame" x="105" y="137" width="40" height="40"/>
+                    </activityIndicatorView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="2xD-3L-Qk4" secondAttribute="trailing" constant="16" id="49R-Kl-0kV"/>
                     <constraint firstItem="nsE-P4-LRM" firstAttribute="top" secondItem="eid-lH-Gcg" secondAttribute="top" constant="33" id="EYe-3h-6Ay"/>
+                    <constraint firstAttribute="trailing" secondItem="i9f-ur-rqv" secondAttribute="trailing" constant="105" id="HrE-XB-MLo"/>
                     <constraint firstItem="q3C-bt-NV6" firstAttribute="leading" secondItem="eid-lH-Gcg" secondAttribute="leading" constant="7" id="PFH-aW-GYk"/>
                     <constraint firstAttribute="bottom" secondItem="q3C-bt-NV6" secondAttribute="bottom" constant="14" id="Syg-XT-ssE"/>
                     <constraint firstAttribute="trailing" secondItem="nsE-P4-LRM" secondAttribute="trailing" id="UoU-Of-7d6"/>
+                    <constraint firstItem="i9f-ur-rqv" firstAttribute="leading" secondItem="eid-lH-Gcg" secondAttribute="leading" constant="105" id="VVQ-SA-5b3"/>
                     <constraint firstAttribute="bottom" secondItem="2xD-3L-Qk4" secondAttribute="bottom" constant="14" id="j2z-G8-MUc"/>
+                    <constraint firstItem="q3C-bt-NV6" firstAttribute="top" secondItem="i9f-ur-rqv" secondAttribute="bottom" constant="135" id="n2c-CL-GqB"/>
                     <constraint firstItem="nsE-P4-LRM" firstAttribute="leading" secondItem="eid-lH-Gcg" secondAttribute="leading" id="sfI-4W-hdO"/>
+                    <constraint firstItem="i9f-ur-rqv" firstAttribute="top" secondItem="eid-lH-Gcg" secondAttribute="top" constant="137" id="z1m-pR-Z9E"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="200" height="227"/>
             <connections>
+                <outlet property="activityIndicator" destination="i9f-ur-rqv" id="h6Q-we-XV7"/>
                 <outlet property="contentCell" destination="eid-lH-Gcg" id="Nya-mf-T6k"/>
                 <outlet property="downloadImage" destination="nsE-P4-LRM" id="2ZX-Eg-jVC"/>
+                <outlet property="favoriteButton" destination="2xD-3L-Qk4" id="UmA-zI-iVn"/>
                 <outlet property="titleImage" destination="q3C-bt-NV6" id="c4j-pc-X6q"/>
             </connections>
             <point key="canvasLocation" x="279.38931297709922" y="108.80281690140846"/>

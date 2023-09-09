@@ -25,6 +25,7 @@ class MainImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         setCell()
         bind()
     }
@@ -66,7 +67,19 @@ class MainImageViewController: UIViewController {
             }
         }
     }
-
+    
+    
+    @IBAction func favoritesShowScreenAction(_ sender: UIButton) {
+        let detailVC = FavoriteImageViewController()
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    
+    func showDetailViewController(for imageEntity: ImageDownloadEntity) {
+        let detailVC = ImageDetailViewController(model: ImageDetailViewModel(imageItem: imageEntity))
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
 
 extension MainImageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -79,17 +92,24 @@ extension MainImageViewController: UICollectionViewDelegate, UICollectionViewDat
                                                                for: indexPath) as? ImageCell {
             let imageEntity = imageViewModel.images[indexPath.row]
                     if let cachedImage = imageViewModel.getCachedImage(for: imageEntity.thumbnailUrl) {
-                        cell.downloadImage.image = cachedImage
-                        cell.titleImage.text = imageEntity.title
+                        cell.configureCachedUI(item: ImageCellViewModel(imageDownload: imageEntity),
+                                               image: cachedImage)
                     } else {
                         cell.setModel(model: ImageCellViewModel(imageDownload: imageViewModel.images[indexPath.row]))
                     }
-            
-            
+           
+            cell.showAlert = { [weak self] in
+                self?.showToast(message: "Сохранено", interval: 3)
+            }
             return cell
             
         }
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedImage = imageViewModel.images[indexPath.row]
+            showDetailViewController(for: selectedImage)
     }
 }
 
