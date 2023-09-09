@@ -72,6 +72,20 @@ class MainImageViewController: UIViewController {
         }
     }
     
+    @IBAction func sortAction(_ sender: UIButton) {
+        switch imageViewModel.currentSortOrder {
+            case .none:
+                imageViewModel.sortImages(by: .ascending)
+                imageViewModel.currentSortOrder = .ascending
+            case .ascending:
+                imageViewModel.sortImages(by: .descending)
+                imageViewModel.currentSortOrder = .descending
+            case .descending:
+                imageViewModel.sortImages(by: .none)
+                imageViewModel.currentSortOrder = .none
+            }
+    }
+    
     
     @IBAction func favoritesShowScreenAction(_ sender: UIButton) {
         let detailVC = FavoriteImageViewController()

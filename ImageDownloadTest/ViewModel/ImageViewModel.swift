@@ -8,7 +8,20 @@ typealias ErrorClosure = (Error) -> Void
 
 final class ImageViewModel {
     
+    enum SortOrder {
+        case ascending
+        case descending
+        case none
+    }
+
+    var currentSortOrder: SortOrder = .none
+    private var originalImages: [ImageDownloadEntity] = []
     var images: [ImageDownloadEntity] = []
+    {
+        didSet {
+            originalImages = images
+        }
+    }
     var downLoadImage: ImageDownload
     var viewUpdate: SimpleClosure?
     var showError: ErrorClosure?
@@ -46,6 +59,19 @@ final class ImageViewModel {
                 strongSelf.showError?(error)
             }
         }
+    }
+    
+    func sortImages(by order: SortOrder) {
+        switch order {
+        case .ascending:
+            images.sort { $0.title < $1.title }
+        case .descending:
+            images.sort { $0.title > $1.title }
+        case .none:
+            images = originalImages
+        }
+        
+        self.viewUpdate?() 
     }
     
     private func cacheImages(from entities: [ImageDownloadEntity]) {
